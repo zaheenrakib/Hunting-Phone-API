@@ -73,7 +73,8 @@ const showPhoneDetals = (phone) =>{
     showDetailsContainer.innerHTML = `
     <img src ="${phone.image}" alt="" />
     <p><span>Storage:</span>${phone?.mainFeatures?.storage}</p>
-    <p><span>GPS:</span>${phone.others.GPS || 'No GPS Available'}</p>
+    <p><span>GPS:</span>${phone.others?.GPS || 'No GPS Available'}</p>
+    <p><span>GPS:</span>${phone.others?.GPS ? phone.others.GPS : 'No GPS available in this device'}</p>
     `
 
     //show the modal
